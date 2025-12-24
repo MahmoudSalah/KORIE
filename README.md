@@ -1,22 +1,92 @@
 # KORIE
-KORIE: A Multi-Task Benchmark for Detection, OCR, and IE on Korean Retail Receipts
+KORIE: Korean Receipt Dataset for Detection, OCR, and Information Extraction
 
-KORIE is an **actively expanding dataset**.  
-The current release includes **674 Korean retail receipts**, consisting of both flatbed-scanned and mobile-captured images. However, this dataset is not static. We are continuously adding new receipts to increase diversity in:
+KORIE is an expanding benchmark dataset of Korean retail receipts designed for research in:
 
-- Store types (restaurants, supermarkets, convenience stores, retail chains, etc.)
-- Geographic regions across South Korea
-- Receipt layouts, fonts, and thermal-printing variations
-- Real-world imaging conditions (blur, glare, shadows, skew, and perspective distortion)
+- Text Detection
 
-Each new batch of receipts undergoes the same annotation and verification pipeline used for the initial release.
+- Optical Character Recognition (OCR)
 
-### 🔄 Version Updates
-Future versions of KORIE will be released in this repository and may include:
-- Additional images and bounding-box annotations  
-- More OCR crops and transcriptions  
-- Expanded item-level and field-level IE labels  
-- Updated train/val/test splits  
-- A changelog describing all modifications
+- Information Extraction (IE)
 
-We encourage researchers to periodically check this repository for the latest version, as KORIE is intended to grow into a larger, more comprehensive benchmark for Korean receipt understanding.
+The dataset contains scanned and mobile-captured thermal receipts exhibiting real-world degradation such as fading, banding, blur, skew, glare, and physical creases. KORIE includes fine-grained annotations for bounding boxes, OCR transcriptions, and structured item-level fields.
+
+This repository hosts the dataset, dataset splits, annotation files, baseline results, and evaluation scripts used in the accompanying manuscript.
+
+📌 Key Features
+✓ Expanding Real-World Dataset
+
+- 674 receipts in the initial release
+- Includes both flatbed-scanned and mobile-captured receipts
+- Mobile images introduce authentic in-the-wild artifacts (perspective distortion, shadows, glare, motion blur)
+- Dataset will continue to expand with additional stores, imaging conditions, and geographic diversity
+
+✓ Multi-Task Benchmark
+
+KORIE supports three research tracks:
+1. Text Detection
+
+  - YOLOv9, YOLOv10, YOLOv11
+  - DINO-DETR (ResNet-50, Swin-L)
+  - Weakly Supervised Object Localization (WSOL) baselines
+
+2. OCR
+
+  - Tesseract / pytesseract
+  - EasyOCR
+  - PaddleOCR
+  - Attention-based BiGRU (trained on KORIE OCR crops)
+
+3. Information Extraction (IE)
+
+  - Zero-shot LLM extraction using Llama-3.x and Qwen-2.5 models
+  - Structured outputs: merchant fields, dates, totals, item tables
+
+📊 Dataset Statistics (v1.0)
+
+- 674 receipts
+- 17,587 word-level OCR crops
+- 2,886 structured IE annotations
+- Rich fields include:
+  - Merchant name, date, time, receipt number
+  - Item name, brand, category
+  - Quantity, unit, unit price, line total
+  - Subtotals, taxes, and total amounts
+
+
+🧪 Baseline Results
+Detection
+| Model   | mAP@0.50  | mAP@0.50:0.95 |
+| ------- | --------- | ------------- |
+| YOLOv11 | **0.888** | **0.762**     |
+| YOLOv10 | 0.860     | 0.751         |
+| YOLOv9  | 0.856     | 0.747         |
+
+OCR
+
+| Model     | CER (%)   | WER (%)   |
+| --------- | --------- | --------- |
+| PaddleOCR | **15.84** | **26.73** |
+| EasyOCR   | 17.36     | 31.43     |
+| Tesseract | 25.43     | 35.26     |
+
+
+Information Extraction (Zero-shot LLMs)
+
+Best model: Qwen2.5-3B-Instruct
+
+- Overall Accuracy: 23.16%
+- Overall F1: 25%
+
+IE remains challenging due to noisy OCR, thermal artifacts, and domain mismatch in Korean text.
+
+📥 Download
+
+
+
+📬 Contact
+
+For questions, collaboration, or dataset contributions, please contact:
+Mahmoud SalahEldin Kasem
+📧 mahmoud.salah@aun.edu.eg
+
