@@ -81,7 +81,11 @@ Best model: Qwen2.5-3B-Instruct
 IE remains challenging due to noisy OCR, thermal artifacts, and domain mismatch in Korean text.
 
 📥 Download
-
+| Split | Size | Link |
+|-------|-------|------|
+| Train | ~1 GB | [Download from Google Drive](https://drive.google.com/file/d/1M3C_xG8Vg47DIbPP2fYpXs6mv5t6YOVq/view?usp=sharing) |
+| Val   | ~346 GB | [Download from Google Drive](https://drive.google.com/file/d/15wXqZUzWaYEJu-rWZwCPuMvHFMZgWQOD/view?usp=sharing) |
+| Test  | ~332 GB | [Download from Google Drive](https://drive.google.com/file/d/1UJZIcTX38FnMa8PZHYj--5OJ8-deSMRI/view?usp=sharing) |
 
 
 📬 Contact
