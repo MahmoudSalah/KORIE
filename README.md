@@ -13,6 +13,9 @@ The dataset contains scanned and mobile-captured thermal receipts exhibiting rea
 
 This repository hosts the dataset, dataset splits, annotation files, baseline results, and evaluation scripts used in the accompanying manuscript.
 
+## Samples
+Two sample image/label pairs are provided in `Samples/` to demonstrate the dataset format.
+
 📌 Key Features
 ✓ Expanding Real-World Dataset
 
