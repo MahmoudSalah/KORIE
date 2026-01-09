@@ -19,7 +19,7 @@ Two sample image/label pairs are provided in `Samples/` to demonstrate the datas
 📌 Key Features
 ✓ Expanding Real-World Dataset
 
-- 674 receipts in the initial release
+- 774 receipts in the initial release
 - Includes both flatbed-scanned and mobile-captured receipts
 - Mobile images introduce authentic in-the-wild artifacts (perspective distortion, shadows, glare, motion blur)
 - Dataset will continue to expand with additional stores, imaging conditions, and geographic diversity
@@ -47,7 +47,7 @@ KORIE supports three research tracks:
 
 📊 Dataset Statistics (v1.0)
 
-- 674 receipts
+- 774 receipts
 - 17,587 word-level OCR crops
 - 2,886 structured IE annotations
 - Rich fields include:
@@ -84,12 +84,26 @@ Best model: Qwen2.5-3B-Instruct
 IE remains challenging due to noisy OCR, thermal artifacts, and domain mismatch in Korean text.
 
 📥 Download
+
+🎯 Key Information Detection
+
 | Split | Size | Link |
 |-------|-------|------|
 | Train | ~1 GB | [Download from Google Drive](https://drive.google.com/file/d/1M3C_xG8Vg47DIbPP2fYpXs6mv5t6YOVq/view?usp=sharing) |
 | Val   | ~346 MB | [Download from Google Drive](https://drive.google.com/file/d/15wXqZUzWaYEJu-rWZwCPuMvHFMZgWQOD/view?usp=sharing) |
 | Test  | ~332 MB | [Download from Google Drive](https://drive.google.com/file/d/1UJZIcTX38FnMa8PZHYj--5OJ8-deSMRI/view?usp=sharing) |
 
+🔍 OCR Dataset
+
+| Split | Size | Link |
+|-------|-------|------|
+| Train | ~58.4 MB | [Download from Google Drive](https://drive.google.com/file/d/1I4BzOqKgF7zbNPlNeood4f7g8pi2xh26/view?usp=sharing) |
+| Val   | ~19.1 MB | [Download from Google Drive](https://drive.google.com/file/d/1v_0iGpBjB5WdWOeKI4C903eeqkRBjTsM/view?usp=sharing) |
+| Test  | ~18.6 MB | [Download from Google Drive](https://drive.google.com/file/d/1GtEzSUA2wTNfOujO67-JEZ_PLpJOdBhg/view?usp=sharing) |
+
+
+
+📝 Item Information Extraction
 
 📬 Contact
 
