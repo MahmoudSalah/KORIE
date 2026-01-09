@@ -109,6 +109,16 @@ YAML configuration file should contain the entity schema for the receipt IE task
 
 
 📝 Item Information Extraction
+| Split | Link |
+|-------|------|
+| Train | [Download from Google Drive](https://drive.google.com/file/d/1W6XYnRtsQ2E8UZlo-MGwxQ0SkByTsdQV/view?usp=sharing) |
+| Val   | [Download from Google Drive](https://drive.google.com/file/d/1ff3z44tfhkeba-CvKv7fQp7EliFQ8EGu/view?usp=sharing) |
+| Test  | [Download from Google Drive](https://drive.google.com/file/d/107ckPQ59gda7172Ls_iiEg5JomWhLtVA/view?usp=sharing) |
+
+
+
+
+
 
 📬 Contact
 
