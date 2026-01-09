@@ -84,7 +84,8 @@ Best model: Qwen2.5-3B-Instruct
 IE remains challenging due to noisy OCR, thermal artifacts, and domain mismatch in Korean text.
 
 YAML configuration file should contain the entity schema for the receipt IE task. It is used by the data loader/training pipeline to map extracted labels to the predefined entity set:
-Description, Quantity, TotalPrice, Price, Item, MerchantName, Total, Subtotal, TotalTax, TransactionDate, TransactionTime, Tip, MerchantPhoneNumber, ReceiptNumber, MerchantAddress, Item_barcode, ProductCode.
+
+**"Description, Quantity, TotalPrice, Price, Item, MerchantName, Total, Subtotal, TotalTax, TransactionDate, TransactionTime, Tip, MerchantPhoneNumber, ReceiptNumber, MerchantAddress, Item_barcode, ProductCode."**
 
 
 📥 Download
